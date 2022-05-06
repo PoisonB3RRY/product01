@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <bean id="helloSpring" class="impl.HelloSpringImpl"></bean>
+   <bean id="user1" class="impl.User">
+      <property name="userId" value="2020" />
+      <property name="userName" value="nickj" />
+      <property name="userAge" value="18" />
+      <property name="userPwd" value="123456" />
+      <property name="userAddress" value="china" />
+      <property name="girlFriend" ref="girlFriend" />
+   </bean>
+   <bean id="girlFriend" class="impl.GirlFriend">
+      <property name="girlName" value="spring" />
+      <property name="girlAge" value="18" />
+      <property name="girlHeight" value="159" />
+   </bean>
+</beans>
